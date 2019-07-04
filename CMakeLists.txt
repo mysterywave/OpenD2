@@ -65,7 +65,7 @@ if(BUILD_GAME)
 		set_target_properties(game PROPERTIES LINKER_LANGUAGE CXX)
 		find_package(SDL2 REQUIRED)
 		include_directories(${SDL2_INCLUDE_DIRS})
-		target_link_libraries(game ${SDL2_LIBRARIES} SDL2_net SDL2_mixer m dl)
+		target_link_libraries(game ${SDL2_LIBRARIES} SDL2 SDL2_net SDL2_mixer m dl)
 	endif()
 	
 	target_compile_definitions(game PUBLIC D2EXE)
